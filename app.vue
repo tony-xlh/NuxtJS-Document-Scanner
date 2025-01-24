@@ -1,9 +1,11 @@
 <template>
   <div>
     <h2>Document Scanner</h2>
-    <ClientOnly>
-      <DocumentScanner @onWebTWAINReady="onWebTWAINReady"></DocumentScanner>
-    </ClientOnly>
+    <div id="viewer">
+      <ClientOnly>
+        <DocumentScanner @onWebTWAINReady="onWebTWAINReady"></DocumentScanner>
+      </ClientOnly>
+    </div>    
     <button @click="scan">Scan</button>
     <button @click="save">Save as PDF</button>
     <div>
@@ -38,3 +40,9 @@ const save = ()=> {
   }
 }
 </script>
+<style lang="css" scoped>
+#viewer {
+  width: 320px;
+  height: 320px;
+}
+</style>
