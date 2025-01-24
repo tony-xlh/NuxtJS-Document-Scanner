@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
+    "build": "ncp node_modules/dwt/dist public/assets/dwt-resources && nuxt build",
+    "dev": "ncp node_modules/dwt/dist public/assets/dwt-resources && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -14,5 +14,8 @@
     "nuxt": "^3.15.2",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "ncp": "^2.0.0"
   }
 }
