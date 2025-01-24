@@ -1,9 +1,14 @@
 <template>
   <div>
     <h2>Document Scanner</h2>
-    <DocumentScanner @onWebTWAINReady="onWebTWAINReady"></DocumentScanner>
+    <ClientOnly>
+      <DocumentScanner @onWebTWAINReady="onWebTWAINReady"></DocumentScanner>
+    </ClientOnly>
     <button @click="scan">Scan</button>
     <button @click="save">Save as PDF</button>
+    <div>
+      Powered by <a href="https://www.dynamsoft.com/web-twain/overview">Dynamic Web TWAIN</a>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
